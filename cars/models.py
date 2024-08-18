@@ -8,7 +8,7 @@ class Car(models.Model):
 
     state_choice = (
         ('AA','Addis Ababa'),
-        ('AR','Afar Region')
+        ('AR','Afar Region'),
         ('AM','Amhara Region'),
         ('BG','Benishangul-Gumuz Region'),
         ('DD','Dire Dawa'),
@@ -18,7 +18,7 @@ class Car(models.Model):
         ('SR','Sidama Region'),
         ('SM','Somali Region'),
         ('SN','Southern Nations'),
-        ('TR','Tigray Region')
+        ('TR','Tigray Region'),
     )
 
     year_choice = []
