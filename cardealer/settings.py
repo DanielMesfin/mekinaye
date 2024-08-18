@@ -100,10 +100,10 @@ WSGI_APPLICATION = 'cardealer.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Carsstore',
-        'USER': 'postgres', 
-        'PASSWORD': '1732', 
-        'HOST': '127.0.0.1',
+        'NAME': 'verceldb',
+        'USER': 'default', 
+        'PASSWORD': 'zl1UTryh5ikW', 
+        'HOST': 'ep-wispy-hall-a44oehoa-pooler.us-east-1.aws.neon.tech',
 		'PORT': '5432',
      }
  }
