@@ -1,12 +1,15 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",  
-        "destination": "/"  
-      }
-    ],
-    "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/api/(.*)", "dest": "/api/index.js" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "cardealer/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "cardealer/wsgi.py"
+    }
   ]
 }
