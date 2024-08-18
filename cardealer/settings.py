@@ -28,7 +28,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['floating-badlands-41165.herokuapp.com', 'cardealerapp.co', 'www.cardealerapp.co', '127.0.0.1:8000']
 # ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1','https://mekinaye-eight.vercel.app/']
-ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1', 'mekinaye-8ye6.vercel.app']
+ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1', 'mekina-alachu.vercel.app']
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
