@@ -183,9 +183,9 @@ SITE_ID = 1
 # EMAIL_USE_TLS = True
 # Cloudinary stuff
 CLOUDINARY_STORAGE ={
-    'CLOUD_NAME': "dqbxdkooq",
-    'API_KEY': "327132612769692",
-    'API_SECRET': "tEV90lw_o9SDvI_4VlX-CRyFzRw",
+    "CLOUD_NAME": "dqbxdkooq",
+    "API_KEY": "141935145997651",
+    'API_SECRET': "Wk6Wza6VCI1Bf5mKmj_LyuWjL38",
     # CLOUDINARY_URL="cloudinary://<your_api_key>:<your_api_secret>@dqbxdkooq
 }
 
