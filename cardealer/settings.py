@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import dj_database_url
+import cloudinary
+import cloudinary_storage
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,6 +53,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'cloudinary',
+    'cloudinary_storage',
     # 'allauth.socialaccount',
 
     # # Providers
@@ -177,7 +181,14 @@ SITE_ID = 1
 # EMAIL_HOST_USER = '#####'
 # EMAIL_HOST_PASSWORD = '#####'
 # EMAIL_USE_TLS = True
+# Cloudinary stuff
+CLOUDINARY_STORAGE ={
+    'CLOUD_NAME': "dqbxdkooq",
+    'API_KEY': "327132612769692",
+    'API_SECRET': "tEV90lw_o9SDvI_4VlX-CRyFzRw",
+}
 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Whitenoise settings
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
