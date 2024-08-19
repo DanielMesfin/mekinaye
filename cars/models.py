@@ -2,6 +2,7 @@ from django.db import models
 from datetime import datetime
 from ckeditor.fields import RichTextField
 from multiselectfield import MultiSelectField
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Car(models.Model):
@@ -58,11 +59,16 @@ class Car(models.Model):
     condition = models.CharField(max_length=100)
     price = models.IntegerField()
     description = RichTextField()
-    car_photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
-    car_photo_1 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
-    car_photo_2 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
-    car_photo_3 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
-    car_photo_4 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    # car_photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
+    # car_photo_1 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    # car_photo_2 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    # car_photo_3 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    # car_photo_4 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    car_photo = CloudinaryField("image")
+    car_photo_1 = CloudinaryField("image",blank=True)
+    car_photo_2 = CloudinaryField("image",blank=True)
+    car_photo_3 = CloudinaryField("image",blank=True)
+    car_photo_4 = CloudinaryField("image",blank=True)
     features = MultiSelectField(choices=features_choices)
     body_style = models.CharField(max_length=100)
     engine = models.CharField(max_length=100)
