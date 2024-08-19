@@ -150,11 +150,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-# STATIC_URL = '/static/'
-# STATIC_ROOT = BASE_DIR /"staticfiles"
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'cardealer/static'),
-# ]
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -181,14 +176,13 @@ SITE_ID = 1
 # EMAIL_HOST_USER = '#####'
 # EMAIL_HOST_PASSWORD = '#####'
 # EMAIL_USE_TLS = True
-# Cloudinary stuff
-CLOUDINARY_STORAGE ={
-    "CLOUD_NAME": "dqbxdkooq",
-    "API_KEY": "141935145997651",
-    'API_SECRET': "Wk6Wza6VCI1Bf5mKmj_LyuWjL38",
-    # CLOUDINARY_URL="cloudinary://<your_api_key>:<your_api_secret>@dqbxdkooq
-}
 
+# Cloudinary stuff
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': "dqbxdkooq",
+    'API_KEY': "141935145997651",
+    'API_SECRET': "Wk6Wza6VCI1Bf5mKmj_LyuWjL38",
+}
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Whitenoise settings
