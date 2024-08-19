@@ -11,10 +11,13 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import dj_database_url
 import cloudinary
-import cloudinary_storage
+import cloudinary.uploader
+import cloudinary.api
 
+# Import the CloudinaryImage and CloudinaryVideo methods for the simplified syntax used in this guide
+from cloudinary import CloudinaryImage
+from cloudinary import CloudinaryVideo
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -178,11 +181,17 @@ SITE_ID = 1
 # EMAIL_USE_TLS = True
 
 # Cloudinary stuff
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': "dqbxdkooq",
-    'API_KEY': "141935145997651",
-    'API_SECRET': "Wk6Wza6VCI1Bf5mKmj_LyuWjL38",
-}
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': "dqbxdkooq",
+#     'API_KEY': "141935145997651",
+#     'API_SECRET': "Wk6Wza6VCI1Bf5mKmj_LyuWjL38",
+# }
+cloudinary.config( 
+  cloud_name = "dqbxdkooq", 
+  api_key = "141935145997651", 
+  api_secret = "Wk6Wza6VCI1Bf5mKmj_LyuWjL38",
+  secure = True
+)
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Whitenoise settings
